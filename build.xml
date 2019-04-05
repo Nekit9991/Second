@@ -2,7 +2,7 @@
 
 <project name="YourProject" default="build" basedir=".">
     <property name="build-dir" value="${basedir}/build" />
-    <property name="src-dir" value="${basedir}/src" --ignore=template.php />
+    <property name="src-dir" value="${basedir}/ />
 
     <target name="build"
         depends="build-common,phploc,phpdox,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpcb" />
