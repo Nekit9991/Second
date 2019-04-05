@@ -136,7 +136,6 @@
             <arg value="--report-file=${build-dir}/logs/checkstyle.xml" />
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" /> 
-			<arg value="--ignore=${src-dir}/bitrix/" />
             
         </exec>
     </target>
@@ -172,7 +171,6 @@
     <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
         <exec executable="phpmd">
             <arg path="${src-dir}" />
-			<arg value="--ignore=${src-dir}/bitrix/" />
             <arg value="xml" />
             <arg value="${build-dir}/phpmd.xml" />
             <arg value="--reportfile" />
