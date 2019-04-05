@@ -103,7 +103,7 @@
             <arg path="${build-dir}/logs" />
             <arg value="--source" />
             <arg path="${src-dir}" />
-			<arg value="--ignore=${src-dir}/bitrix/" />
+			
             <arg value="--output" />
             <arg path="${build-dir}/code-browser" />
         </exec>
@@ -114,7 +114,7 @@
             <arg value="--log-pmd" />
             <arg value="${build-dir}/logs/pmd-cpd.xml" />
             <arg path="${src-dir}" />
-			<arg value="--ignore=${src-dir}/bitrix/" />
+			
             
         </exec>
     </target>
@@ -124,7 +124,7 @@
         <exec executable="phpcs">
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" />
-            <arg value="--ignore=${src-dir}/bitrix/" />			
+            			
             
         </exec>
     </target>
@@ -135,7 +135,7 @@
             <arg value="--report-file=${build-dir}/logs/checkstyle.xml" />
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" /> 
-			<arg value="--ignore=${src-dir}/bitrix/" />	
+				
             
         </exec>
     </target>
@@ -154,7 +154,7 @@
            <arg value="--log-xml" />
            <arg value="${build-dir}/logs/phploc.xml" />
            <arg path="${src-dir}" />
-		   <arg value="--ignore=${src-dir}/bitrix/" />
+		   
            
         </exec>
     </target>
@@ -162,7 +162,7 @@
      <target name="phpmd" description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
         <exec executable="phpmd">
             <arg path="${src-dir}" />
-			<arg value="--ignore=${src-dir}/bitrix/" />
+			
             <arg value="text" />
             <arg value="${build-dir}/phpmd.xml" />
         </exec>
@@ -171,7 +171,7 @@
     <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
         <exec executable="phpmd">
             <arg path="${src-dir}" />
-			<arg value="--ignore=${src-dir}/bitrix/" />
+			
             <arg value="xml" />
             <arg value="${build-dir}/phpmd.xml" />
             <arg value="--reportfile" />
