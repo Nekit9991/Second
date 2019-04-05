@@ -94,7 +94,6 @@
             <arg value="--jdepend-chart=${build-dir}/pdepend/dependencies.svg" />
             <arg value="--overview-pyramid=${build-dir}/pdepend/overview-pyramid.svg" />
             <arg path="${src-dir}" />
-			<arg value="--ignore=${src-dir}/bitrix/" />
         </exec>
     </target>
 
@@ -136,6 +135,7 @@
             <arg value="--report-file=${build-dir}/logs/checkstyle.xml" />
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" /> 
+			<arg value="--ignore=${src-dir}/bitrix/" />	
             
         </exec>
     </target>
