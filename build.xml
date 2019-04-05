@@ -103,6 +103,7 @@
             <arg path="${build-dir}/logs" />
             <arg value="--source" />
             <arg path="${src-dir}" />
+            <arg value="--ignore=${src-dir}/bitrix/" />
             <arg value="--output" />
             <arg path="${build-dir}/code-browser" />
         </exec>
@@ -113,6 +114,7 @@
             <arg value="--log-pmd" />
             <arg value="${build-dir}/logs/pmd-cpd.xml" />
             <arg path="${src-dir}" />
+            <arg value="--ignore=${src-dir}/bitrix/" />
         </exec>
     </target>
 
@@ -121,6 +123,7 @@
         <exec executable="phpcs">
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" />
+            <arg value="--ignore=${src-dir}/bitrix/" />
         </exec>
     </target>
 
@@ -130,6 +133,7 @@
             <arg value="--report-file=${build-dir}/logs/checkstyle.xml" />
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" />
+            <arg value="--ignore=${src-dir}/bitrix/" />
         </exec>
     </target>
 
@@ -147,6 +151,7 @@
            <arg value="--log-xml" />
            <arg value="${build-dir}/logs/phploc.xml" />
            <arg path="${src-dir}" />
+           <arg value="--ignore=${src-dir}/bitrix/" />
         </exec>
     </target>
 
