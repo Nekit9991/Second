@@ -124,7 +124,7 @@
         <exec executable="phpcs">
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" />
-	    <arg value="--ignore=junk.php" />
+			<arg value="--ignore=/bitrix,*.css,*.js" />
             			
             
         </exec>
@@ -136,7 +136,7 @@
             <arg value="--report-file=${build-dir}/logs/checkstyle.xml" />
             <arg value="--standard=${build-dir}/phpcs.xml" />
             <arg path="${src-dir}" />
-		<arg value="--ignore=junk.php" />
+			<arg value="--ignore=/bitrix,*.css,*.js" />
 				
             
         </exec>
