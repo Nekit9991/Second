@@ -94,7 +94,6 @@
             <arg value="--jdepend-chart=${build-dir}/pdepend/dependencies.svg" />
             <arg value="--overview-pyramid=${build-dir}/pdepend/overview-pyramid.svg" />
             <arg path="${src-dir}" />
-	<arg value="--ignore=/bitrix,*.css,*.js" />
         </exec>
     </target>
 
