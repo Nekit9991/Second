@@ -165,7 +165,7 @@
      <target name="phpmd" description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
         <exec executable="phpmd">
             <arg path="${src-dir}" />
-	<arg value="--exclude /bitrix" />
+	<arg value="--exclude ${src-dir}/bitrix/*" />
             <arg value="text" />
             
         </exec>
@@ -174,7 +174,7 @@
     <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
         <exec executable="phpmd">
             <arg path="${src-dir}" />
-	<arg value="--exclude /bitrix" />
+	<arg value="--exclude ${src-dir}/bitrix" />
 			
             <arg value="xml" />
             <arg value="${build-dir}/phpmd.xml" />
