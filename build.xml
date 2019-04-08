@@ -115,6 +115,7 @@
             <arg value="--log-pmd" />
             <arg value="${build-dir}/logs/pmd-cpd.xml" />
             <arg path="${src-dir}" />
+		<arg value="--ignore=/bitrix,*.css,*.js" />
 			
             
         </exec>
